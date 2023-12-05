@@ -45,8 +45,14 @@
 
 
 --insert into kupac(ime,prezime,email,adresa,telefon) values
-('Marija','Mihelić','mmiheli14@gmail.com','Opatijska 26b','0989836373'),
-(
+--('Marija','Mihelić','mmiheli14@gmail.com','Opatijska 26b','0989836373'),
+--('Božić','Petra','bozic.petra35@gmail.com','Vukovarska1','0911234567'),
+--('Farkaš','Dominik','sinisartf13@gmail.com','Vukovarska1','0911234568'),
+--('Glavaš','Natalija','natalija-glavas@hotmail.com','Vukovarska1','0911234569'),
+--('Janić','Miroslav','miroslav.janic@gmail.com','Vukovarska1','0911234560'),
+--('Janješić','Filip','filip.janjesic@gmail.com','Vukovarska1','0911234589'),
+--('Jović','Nataša','natasajovic238@gmail.com','Vukovarska1','0911234509');
 
 
-select ime,prezime,email,adresa,telefon from kupac;
+--select ime,prezime,email,adresa,telefon from kupac;
+
