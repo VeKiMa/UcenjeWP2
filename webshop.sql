@@ -1,36 +1,52 @@
---create database webshop;
+﻿--drop database if exists webshop1;
 --go
---drop database webshop;
 
---use webshop;
+--create database webshop1;
+--go
+
+--use webshop1;
 
 --create table narudzba(
---sifra int,
---kupac int,
---datumnarudzbe date,
+--sifra int not null primary key identity(1,1),
+--kupac int not null,
+--datumnarudzbe datetime,
+--datumdostave datetime,
+--placanje varchar(50) not null,
 --ukupaniznos decimal(18,2)
 --);
 
 --create table detaljinarudzbe(
---sifra int,
---detaljinarudzbe int,
---proizvod varchar(20),
---iznos decimal(18,2),
+--sifra int not null primary key identity,
+--narudzba int,
+--proizvod int not null,
+--kolicina varchar(999), 
 --cijena decimal(18,2)
 --);
 
 --create table kupac(
---sifra int,
---ime varchar(50),
---prezime varchar(50),
---email varchar(100),
---adresa varchar (150),
---telefon varchar(20)
+--sifra int not null primary key identity,
+--ime varchar(50) not null,
+--prezime varchar(50) not null,
+--email varchar(100) not null,
+--adresa varchar(100) not null,
+--telefon varchar(20) 
 --);
 
 --create table proizvod(
---sifra int,
---ime varchar(50),
---vrsta varchar(50),
+--sifra int not null primary key identity,
+--naziv varchar(50) not null,
+--vrsta varchar(50) not null,
 --cijena decimal(18,2)
 --);
+
+--alter table narudzba add foreign key (kupac) references kupac(sifra);
+--alter table detaljinarudzbe add foreign key (narudzba) references narudzba(sifra);
+--alter table detaljinarudzbe add foreign key (proizvod) references proizvod(sifra);
+
+
+--insert into kupac(ime,prezime,email,adresa,telefon) values
+('Marija','Mihelić','mmiheli14@gmail.com','Opatijska 26b','0989836373'),
+(
+
+
+select ime,prezime,email,adresa,telefon from kupac;
