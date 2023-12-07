@@ -45,7 +45,15 @@ sifra int not null primary key identity,
 naziv varchar(50),
 opis varchar(100)
 );
+<<<<<<< HEAD
+=======
 
+>>>>>>> 642f40ce3de5817a946ec3d34abc26bf272bb1d4
+
+alter table narudzba add foreign key (kupac) references kupac(sifra);
+alter table detaljinarudzbe add foreign key (narudzba) references narudzba(sifra);
+alter table detaljinarudzbe add foreign key (proizvod) references proizvod(sifra);
+alter table proizvod add foreign key (vrsta) references vrste(sifra);
 
 alter table narudzba add foreign key (kupac) references kupac(sifra);
 alter table detaljinarudzbe add foreign key (narudzba) references narudzba(sifra);
@@ -62,6 +70,7 @@ insert into kupac(ime,prezime,email,adresa,telefon) values
 ('Jović','Nataša','natasajovic238@gmail.com','Vukovarska1','0911234509');
 
 
+<<<<<<< HEAD
 insert into vrste(naziv,opis) values
 ('katana','elite'),
 ('katana','tiger'),
@@ -84,3 +93,5 @@ insert into detaljinarudzbe(narudzba,proizvod,kolicina,cijena) values
 ('8','2','1',185);
 
 
+=======
+>>>>>>> 642f40ce3de5817a946ec3d34abc26bf272bb1d4
