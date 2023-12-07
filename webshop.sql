@@ -46,6 +46,7 @@ naziv varchar(50),
 opis varchar(100)
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 642f40ce3de5817a946ec3d34abc26bf272bb1d4
@@ -68,7 +69,14 @@ insert into kupac(ime,prezime,email,adresa,telefon) values
 ('Janić','Miroslav','miroslav.janic@gmail.com','Vukovarska1','0911234560'),
 ('Janješić','Filip','filip.janjesic@gmail.com','Vukovarska1','0911234589'),
 ('Jović','Nataša','natasajovic238@gmail.com','Vukovarska1','0911234509');
+=======
 
+>>>>>>> 642f40ce3de5817a946ec3d34abc26bf272bb1d4
+
+alter table narudzba add foreign key (kupac) references kupac(sifra);
+alter table detaljinarudzbe add foreign key (narudzba) references narudzba(sifra);
+alter table detaljinarudzbe add foreign key (proizvod) references proizvod(sifra);
+alter table proizvod add foreign key (vrsta) references vrste(sifra);
 
 <<<<<<< HEAD
 insert into vrste(naziv,opis) values
@@ -87,11 +95,14 @@ insert into narudzba(kupac,datumnarudzbe,datumdostave,placanje,ukupaniznos) valu
 ('2','2023-03-21','2023-04-07','pouzecem',185);
 
 
+<<<<<<< HEAD
 insert into detaljinarudzbe(narudzba,proizvod,kolicina,cijena) values
 ('6','7','1',170),
 ('7','4','1',180),
 ('8','2','1',185);
 
 
+=======
+>>>>>>> 642f40ce3de5817a946ec3d34abc26bf272bb1d4
 =======
 >>>>>>> 642f40ce3de5817a946ec3d34abc26bf272bb1d4
