@@ -1,10 +1,11 @@
-﻿--drop database if exists webshop1;
+--drop database if exists WEBSHOP;
 --go
 
---create database webshop1;
+
+--create database WEBSHOP;
 --go
 
---use webshop1;
+--use WEBSHOP;
 
 --create table narudzba(
 --sifra int not null primary key identity(1,1),
@@ -39,10 +40,19 @@
 --cijena decimal(18,2)
 --);
 
+--create table vrste(
+--sifra int not null,
+--suvenir varchar(50),
+--dekoracija varchar(50),
+--umjetnina varchar(50),
+--opis varchar(50)
+--);
+
+
 --alter table narudzba add foreign key (kupac) references kupac(sifra);
 --alter table detaljinarudzbe add foreign key (narudzba) references narudzba(sifra);
 --alter table detaljinarudzbe add foreign key (proizvod) references proizvod(sifra);
-
+--alter table vrste add foreign key (vrsta) references vrsta(sifra);
 
 --insert into kupac(ime,prezime,email,adresa,telefon) values
 --('Marija','Mihelić','mmiheli14@gmail.com','Opatijska 26b','0989836373'),
@@ -55,4 +65,3 @@
 
 
 --select ime,prezime,email,adresa,telefon from kupac;
-
